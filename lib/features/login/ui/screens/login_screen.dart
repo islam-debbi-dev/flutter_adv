@@ -1,11 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_adv/core/helpers/spacing.dart';
 import 'package:flutter_adv/core/theming/styles.dart';
-import 'package:flutter_adv/core/widgets/app_text_form_field.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-import '../../../core/widgets/app_text_button.dart';
-import '../../../core/widgets/app_text_divider.dart';
+import '../../../../core/widgets/app_text_button.dart';
+import '../../../../core/widgets/app_text_divider.dart';
+import '../../data/models/login_request_body.dart';
+import '../../logic/login_cubit.dart';
+import '../widgets/email_and_password.dart';
+import '../widgets/login_bloc_listener.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});
@@ -16,8 +20,6 @@ class LoginScreen extends StatefulWidget {
 
 class _LoginScreenState extends State<LoginScreen> {
   @override
-  final formKey = GlobalKey<FormState>();
-  bool isObscureText = true;
   Widget build(BuildContext context) {
     return Scaffold(
       body: SafeArea(
@@ -34,51 +36,41 @@ class _LoginScreenState extends State<LoginScreen> {
                   style: TextStyles.font14GrayRegular,
                 ),
                 verticalSpace(35),
-                Form(
-                  key: formKey,
-                  child: Column(
-                    children: [
-                      const AppTextFormField(hintText: 'Email'),
-                      verticalSpace(18),
-                      AppTextFormField(
-                        hintText: 'Password',
-                        isObscureText: isObscureText,
-                        suffixIcon: GestureDetector(
-                          onTap: () {
-                            setState(() {
-                              isObscureText = !isObscureText;
-                            });
-                          },
-                          child: Icon(isObscureText
-                              ? Icons.visibility_off
-                              : Icons.visibility),
-                        ),
+                Column(
+                  children: [
+                    const EmailAndPassword(),
+                    verticalSpace(24),
+                    Align(
+                      alignment: AlignmentDirectional.centerEnd,
+                      child: Text(
+                        'Forget Passwoer ?',
+                        style: TextStyles.font12BlueRegular,
                       ),
-                      verticalSpace(24),
-                      Align(
-                        alignment: AlignmentDirectional.centerEnd,
-                        child: Text(
-                          'Forget Passwoer ?',
-                          style: TextStyles.font12BlueRegular,
-                        ),
-                      ),
-                      verticalSpace(40),
-                      AppTextButton(
-                          verticalPadding: 11,
-                          buttonText: 'Login',
-                          textStyle: TextStyles.font16whiteSemibold,
-                          onPressed: () {}),
-                      verticalSpace(40),
-                      const AppTextDivider(),
-                      verticalSpace(40),
-                      /* SocialButton(
-                        svgPath: 'assets/images/google_icon.svg',
+                    ),
+                    verticalSpace(40),
+                    AppTextButton(
+                        verticalPadding: 11,
+                        buttonText: 'Login',
+                        textStyle: TextStyles.font16whiteSemibold,
                         onPressed: () {
-                          print("Google button pressed");
-                        },
-                      ), */
-                    ],
-                  ),
+                          validateThenDoLogin(context);
+                        }),
+                    verticalSpace(40),
+                    const AppTextDivider(),
+                    verticalSpace(40),
+                    // TermAndConditionsText(),
+                    verticalSpace(40),
+                    //const AleadyHaveAnAccount(),
+                    verticalSpace(40),
+                    const LoginBlocListener(),
+
+                    /* SocialButton(
+                      svgPath: 'assets/images/google_icon.svg',
+                      onPressed: () {
+                        print("Google button pressed");
+                      },
+                    ), */
+                  ],
                 ),
               ],
             ),
@@ -86,5 +78,13 @@ class _LoginScreenState extends State<LoginScreen> {
         ),
       ),
     );
+  }
+}
+
+void validateThenDoLogin(BuildContext context) {
+  if (context.read<LoginCubit>().formKey.currentState!.validate()) {
+    context.read<LoginCubit>().emitLoginState(LoginRequestBody(
+        username: context.read<LoginCubit>().emailController.text,
+        password: context.read<LoginCubit>().passwordController.text));
   }
 }
