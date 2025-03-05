@@ -74,6 +74,7 @@ class AppTextFormField extends StatelessWidget {
       ),
       obscureText: isObscureText ?? false,
       style: TextStyles.font14blackBuleMeduim,
+      controller: controller,
       validator: (value) {
         return validator(value);
       },

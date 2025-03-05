@@ -1,13 +1,13 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'login_response.dart';
+part of 'sginup_response.dart';
 
 // **************************************************************************
 // JsonSerializableGenerator
 // **************************************************************************
 
-LoginResponse _$LoginResponseFromJson(Map<String, dynamic> json) =>
-    LoginResponse(
+SginupResponse _$SginupResponseFromJson(Map<String, dynamic> json) =>
+    SginupResponse(
       message: json['message'] as String?,
       userData: json['data'] == null
           ? null
@@ -16,7 +16,7 @@ LoginResponse _$LoginResponseFromJson(Map<String, dynamic> json) =>
       code: (json['code'] as num?)?.toInt(),
     );
 
-Map<String, dynamic> _$LoginResponseToJson(LoginResponse instance) =>
+Map<String, dynamic> _$SginupResponseToJson(SginupResponse instance) =>
     <String, dynamic>{
       'message': instance.message,
       'data': instance.userData,

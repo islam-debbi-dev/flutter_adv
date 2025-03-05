@@ -1,22 +1,23 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_adv/core/helpers/spacing.dart';
-import 'package:flutter_adv/core/theming/colors.dart';
-import 'package:flutter_adv/core/theming/styles.dart';
+
+import '../../../../core/helpers/spacing.dart';
+import '../../../../core/theming/colors.dart';
+import '../../../../core/theming/styles.dart';
 
 class PasswordValidations extends StatelessWidget {
   final bool hasLowerCase;
   final bool hasUpperCase;
+  final bool hasSpecialCharacters;
   final bool hasNumber;
-  final bool hasSpecialCharacter;
   final bool hasMinLength;
-
-  const PasswordValidations(
-      {super.key,
-      required this.hasLowerCase,
-      required this.hasUpperCase,
-      required this.hasNumber,
-      required this.hasSpecialCharacter,
-      required this.hasMinLength});
+  const PasswordValidations({
+    super.key,
+    required this.hasLowerCase,
+    required this.hasUpperCase,
+    required this.hasSpecialCharacters,
+    required this.hasNumber,
+    required this.hasMinLength,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -26,33 +27,33 @@ class PasswordValidations extends StatelessWidget {
         verticalSpace(2),
         buildValidationRow('At least 1 uppercase letter', hasUpperCase),
         verticalSpace(2),
+        buildValidationRow(
+            'At least 1 special character', hasSpecialCharacters),
+        verticalSpace(2),
         buildValidationRow('At least 1 number', hasNumber),
         verticalSpace(2),
-        buildValidationRow('At least 1 special character', hasSpecialCharacter),
-        verticalSpace(2),
-        buildValidationRow('At least 8 characters', hasMinLength),
+        buildValidationRow('At least 8 characters long', hasMinLength),
       ],
     );
   }
 
-  Widget buildValidationRow(String s, bool hasValidated) {
+  Widget buildValidationRow(String text, bool hasValidated) {
     return Row(
       children: [
         const CircleAvatar(
           radius: 2.5,
+          backgroundColor: ColorsManager.gray,
         ),
         horizontalSpace(6),
         Text(
-          s,
-          style: TextStyles.font12BlueRegular.copyWith(
+          text,
+          style: TextStyles.font14blackBuleMeduim.copyWith(
             decoration: hasValidated ? TextDecoration.lineThrough : null,
             decorationColor: Colors.green,
             decorationThickness: 2,
-            color: hasValidated
-                ? ColorsManager.gary
-                : const Color.fromARGB(255, 226, 82, 82),
+            color: hasValidated ? ColorsManager.gray : ColorsManager.darkBlue,
           ),
-        ),
+        )
       ],
     );
   }
