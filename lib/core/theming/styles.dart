@@ -38,12 +38,12 @@ class TextStyles {
   static TextStyle font10GrayRegular = TextStyle(
     fontSize: 10.sp,
     fontWeight: FontWeightHelper.regular,
-    color: ColorsManager.gary,
+    color: ColorsManager.gray,
   );
   static TextStyle font14GrayRegular = TextStyle(
     fontSize: 14.sp,
     fontWeight: FontWeightHelper.regular,
-    color: ColorsManager.gary,
+    color: ColorsManager.gray,
   );
   static TextStyle font14blackBuleMeduim = TextStyle(
     fontSize: 14.sp,

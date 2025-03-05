@@ -12,8 +12,15 @@ class LoginRepo {
   Future<ApiResult<LoginResponse>> login(LoginRequestBody login) async {
     try {
       final response = await apiService.login(login);
-      return ApiResult.success(response);
+      if (response.status == true) {
+        print("Login response success repo");
+        return ApiResult.success(response);
+      } else {
+        print("Login failed repo 1: ${response.message}");
+        return ApiResult.failure(ErrorHandler.handle(response.message));
+      }
     } catch (e) {
+      print("Login failed repo: ${ErrorHandler.handle(e).toString()}");
       return ApiResult.failure(ErrorHandler.handle(e));
     }
   }

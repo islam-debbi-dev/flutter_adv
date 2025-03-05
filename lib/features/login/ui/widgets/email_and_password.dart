@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_adv/core/helpers/app_regex.dart';
-import 'package:flutter_adv/features/login/logic/login_cubit.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_adv/core/helpers/spacing.dart';
-import 'package:flutter_adv/core/widgets/app_text_form_field.dart';
 
+import '../../../../core/helpers/app_regex.dart';
+import '../../../../core/helpers/spacing.dart';
+import '../../../../core/widgets/app_text_form_field.dart';
+import '../../logic/login_cubit.dart';
 import 'password_validations.dart';
 
 class EmailAndPassword extends StatefulWidget {
@@ -16,13 +16,15 @@ class EmailAndPassword extends StatefulWidget {
 
 class _EmailAndPasswordState extends State<EmailAndPassword> {
   bool isObscureText = true;
+
+  bool hasLowercase = false;
+  bool hasUppercase = false;
+  bool hasSpecialCharacters = false;
+  bool hasNumber = false;
+  bool hasMinLength = false;
+
   late TextEditingController passwordController;
 
-  bool hasLowerCase = false;
-  bool hasUpperCase = false;
-  bool hasNumber = false;
-  bool hasSpecialCharacter = false;
-  bool hasMinLength = false;
   @override
   void initState() {
     super.initState();
@@ -33,11 +35,11 @@ class _EmailAndPasswordState extends State<EmailAndPassword> {
   void setupPasswordControllerListener() {
     passwordController.addListener(() {
       setState(() {
-        hasLowerCase = AppRegex.hasLowerCase(passwordController.text);
-        hasUpperCase = AppRegex.hasUpperCase(passwordController.text);
-        hasNumber = AppRegex.hasNumber(passwordController.text);
-        hasSpecialCharacter =
+        hasLowercase = AppRegex.hasLowerCase(passwordController.text);
+        hasUppercase = AppRegex.hasUpperCase(passwordController.text);
+        hasSpecialCharacters =
             AppRegex.hasSpecialCharacter(passwordController.text);
+        hasNumber = AppRegex.hasNumber(passwordController.text);
         hasMinLength = AppRegex.hasMinLength(passwordController.text);
       });
     });
@@ -55,20 +57,15 @@ class _EmailAndPasswordState extends State<EmailAndPassword> {
               if (value == null ||
                   value.isEmpty ||
                   !AppRegex.isEmailValid(value)) {
-                return 'Please enter your email';
+                return 'Please enter a valid email';
               }
             },
             controller: context.read<LoginCubit>().emailController,
           ),
           verticalSpace(18),
           AppTextFormField(
-            hintText: 'Password',
             controller: context.read<LoginCubit>().passwordController,
-            validator: (value) {
-              if (value == null || value.isEmpty) {
-                return 'Please enter your password';
-              }
-            },
+            hintText: 'Password',
             isObscureText: isObscureText,
             suffixIcon: GestureDetector(
               onTap: () {
@@ -76,16 +73,22 @@ class _EmailAndPasswordState extends State<EmailAndPassword> {
                   isObscureText = !isObscureText;
                 });
               },
-              child:
-                  Icon(isObscureText ? Icons.visibility_off : Icons.visibility),
+              child: Icon(
+                isObscureText ? Icons.visibility_off : Icons.visibility,
+              ),
             ),
+            validator: (value) {
+              if (value == null || value.isEmpty) {
+                return 'Please enter a valid password';
+              }
+            },
           ),
           verticalSpace(24),
           PasswordValidations(
-            hasLowerCase: hasLowerCase,
-            hasUpperCase: hasUpperCase,
+            hasLowerCase: hasLowercase,
+            hasUpperCase: hasUppercase,
+            hasSpecialCharacters: hasSpecialCharacters,
             hasNumber: hasNumber,
-            hasSpecialCharacter: hasSpecialCharacter,
             hasMinLength: hasMinLength,
           ),
         ],
@@ -95,8 +98,7 @@ class _EmailAndPasswordState extends State<EmailAndPassword> {
 
   @override
   void dispose() {
-    // TODO: implement dispose
-    super.dispose();
     passwordController.dispose();
+    super.dispose();
   }
 }
