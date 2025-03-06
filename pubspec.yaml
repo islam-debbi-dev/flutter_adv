@@ -58,6 +58,8 @@ dependencies:
   flutter_screenutil: ^5.9.3
   # build file auto generated
   build_runner: ^2.4.14
+  # to fix text being hidden bug in flutter_screenutil in release mode
+  flutter_screenutil: ^5.9.3
 
 dev_dependencies:
   flutter_test:
