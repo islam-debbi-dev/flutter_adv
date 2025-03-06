@@ -1,7 +1,6 @@
 import 'package:dio/dio.dart';
 import 'package:flutter_adv/features/login/logic/login_cubit.dart';
 import 'package:flutter_adv/features/singup/data/repos/sign_up_repo.dart';
-import 'package:flutter_adv/features/singup/logic/sgin_up_state.dart';
 import 'package:get_it/get_it.dart';
 
 import '../../features/login/data/repo/login_repo.dart';
