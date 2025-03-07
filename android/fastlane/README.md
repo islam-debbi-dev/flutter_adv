@@ -21,7 +21,7 @@ For _fastlane_ installation instructions, see [Installing _fastlane_](https://do
 [bundle exec] fastlane android firsbase_distribution
 ```
 
-Lane for android firsbase app Distribution
+Lane for android firebase app Distribution
 
 ----
 
