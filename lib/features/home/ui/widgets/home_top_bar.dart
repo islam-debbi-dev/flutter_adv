@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_adv/core/theming/colors.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 import '../../../../core/theming/styles.dart';
@@ -29,7 +30,7 @@ class HomeTopBar extends StatelessWidget {
           radius: 24,
           backgroundColor: ColorsManager.lighterGary,
           child: Padding(
-            padding: const EdgeInsets.all(4),
+            padding: EdgeInsets.symmetric(horizontal: 4.w, vertical: 4.h),
             child: SvgPicture.asset(
               'assets/svgs/notifications.svg',
             ),
