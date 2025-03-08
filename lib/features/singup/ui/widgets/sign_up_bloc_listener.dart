@@ -20,7 +20,7 @@ class SignupBlocListener extends StatelessWidget {
       //     current is SginupError,
       listener: (context, state) {
         state.whenOrNull(
-          SginupLoading: () {
+          SignupLoading: () {
             showDialog(
               context: context,
               builder: (context) => const Center(
@@ -30,11 +30,11 @@ class SignupBlocListener extends StatelessWidget {
               ),
             );
           },
-          SginupSuccess: (signupResponse) {
+          SignupSuccess: (signupResponse) {
             context.pop();
             showSuccessDialog(context);
           },
-          SginupError: (error) {
+          SignupError: (error) {
             setupErrorState(context, error);
           },
         );

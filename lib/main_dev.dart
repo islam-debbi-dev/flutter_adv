@@ -6,7 +6,7 @@ import 'core/di/dependency_injection.dart';
 
 void main() async {
   setupGetIt();
-  // 1 to fix text being hidden bug in flutter_screenutil in release mode
+  // to fix text being hidden bug in flutter_screenutil in release mode
   await ScreenUtil.ensureScreenSize();
   runApp(DocApp(
     appRouter: AppRouter(),
