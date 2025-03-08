@@ -41,7 +41,7 @@ android {
         development {
             dimension "default"
             applicationIdSuffix ".dev"
-            resValue "string", "app_name", "Flutter Adv Dev"
+            resValue "string", "app_name", "DocDoc Dev"
             
         }
        

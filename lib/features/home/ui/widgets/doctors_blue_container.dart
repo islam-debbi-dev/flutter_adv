@@ -52,7 +52,7 @@ class DoctorsBlueContainer extends StatelessWidget {
           Positioned(
             top: 0.h,
             right: -10.w, // Adjusted to move the image to the right
-            child: Container(
+            child: SizedBox(
               width: 214.w,
               child: Image.asset('assets/images/doctor_card_home_page.png'),
             ),
