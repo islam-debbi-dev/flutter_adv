@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 
+import 'widgets/doctors_blue_container.dart';
+import 'widgets/home_top_bar.dart';
+
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
 
@@ -11,11 +14,19 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('Home'),
-      ),
-      body: const Center(
-        child: Text('Home Screen'),
+      backgroundColor: Colors.white,
+      body: SafeArea(
+        child: Container(
+          width: double.infinity,
+          margin: EdgeInsets.fromLTRB(20, 16, 20, 28),
+          child: const Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              HomeTopBar(),
+              DoctorsBlueContainer(),
+            ],
+          ),
+        ),
       ),
     );
   }
