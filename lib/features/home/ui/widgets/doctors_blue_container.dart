@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_adv/core/helpers/spacing.dart';
+import 'package:flutter_adv/core/theming/colors.dart';
 import 'package:flutter_adv/core/theming/styles.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -9,17 +10,17 @@ class DoctorsBlueContainer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: 270.h,
+      height: 260.h,
       child: Stack(
         alignment: Alignment.bottomCenter,
         children: [
           Container(
             width: double.infinity,
-            height: 210.h,
+            height: 205.h,
             padding: EdgeInsets.symmetric(horizontal: 16.w, vertical: 16.h),
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(24.r),
-              color: Colors.blue,
+              color: ColorsManager.mainBlue,
               //    fit : BoxFit.cover,
             ),
             child: Column(
@@ -40,7 +41,7 @@ class DoctorsBlueContainer extends StatelessWidget {
                           borderRadius: BorderRadius.circular(48.r),
                         ),
                         padding: EdgeInsets.symmetric(
-                            horizontal: 24.w, vertical: 12.h),
+                            horizontal: 20.w, vertical: 11.h),
                       ),
                       child: Text('Find Nearby',
                           style: TextStyles.font12BlueRegular)),
@@ -49,7 +50,7 @@ class DoctorsBlueContainer extends StatelessWidget {
             ),
           ),
           Positioned(
-            top: 10.h,
+            top: 0.h,
             right: -10.w, // Adjusted to move the image to the right
             child: Container(
               width: 214.w,
