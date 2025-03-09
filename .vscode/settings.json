@@ -1,3 +1,7 @@
 {
+<<<<<<< HEAD
     "java.configuration.updateBuildConfiguration": "interactive",
+=======
+    "java.configuration.updateBuildConfiguration": "interactive"
+>>>>>>> parent of 74a23ec (- add home res model)
 }
