@@ -33,10 +33,10 @@ dependencies:
   # use with te cupertionIcon class for ios style icon 
   cupertino_icons: ^1.0.8
   # state managment
-  flutter_bloc: ^8.1.6
+  flutter_bloc: ^9.1.0
   # code generator
-  freezed: ^2.5.7
-  freezed_annotation: ^2.4.4
+  freezed: ^3.0.0-0.0.dev
+  freezed_annotation: ^3.0.0
   # for dependency injection
   get_it: ^8.0.3
    # automatically generate code for converting 
@@ -63,7 +63,7 @@ dependencies:
   # flutter libary lo load image from network
   cached_network_image: ^3.1.0
   # for image picker
-  shimmer: ^2.0.0
+  shimmer: ^3.0.0
   # reading and writing simple value 
   shared_preferences: ^2.5.2
   # 
@@ -78,7 +78,7 @@ dev_dependencies:
   # activated in the `analysis_options.yaml` file located at the root of your
   # package. See that file for information about deactivating specific lint
   # rules and activating additional ones.
-  flutter_lints: ^4.0.0
+  flutter_lints: ^5.0.0
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec

@@ -5,7 +5,6 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'core/di/dependency_injection.dart';
 
 void main() async {
-  // for
   WidgetsFlutterBinding.ensureInitialized();
   setupGetIt();
   // to fix text being hidden bug in flutter_screenutil in release mode
