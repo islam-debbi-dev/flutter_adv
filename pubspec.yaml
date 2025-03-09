@@ -64,6 +64,10 @@ dependencies:
   cached_network_image: ^3.1.0
   # for image picker
   shimmer: ^2.0.0
+  # reading and writing simple value 
+  shared_preferences: ^2.5.2
+  # 
+  #flutter_secure_storage: ^5.0.2
 
 dev_dependencies:
   flutter_test:
