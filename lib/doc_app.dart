@@ -23,11 +23,7 @@ class DocApp extends StatelessWidget {
           ),
           debugShowCheckedModeBanner: false,
           onGenerateRoute: appRouter.generateRoute,
-<<<<<<< HEAD
-          initialRoute: Routes.onBoardingScreen,
-=======
           initialRoute: Routes.homeScreen,
->>>>>>> parent of 5570867 (add save token without run)
         ));
   }
 }

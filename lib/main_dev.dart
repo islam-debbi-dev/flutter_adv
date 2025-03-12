@@ -6,7 +6,10 @@ import 'core/di/dependency_injection.dart';
 
 void main() async {
 <<<<<<< HEAD
+<<<<<<< HEAD
   WidgetsFlutterBinding.ensureInitialized();
+=======
+>>>>>>> parent of 5570867 (add save token without run)
 =======
 >>>>>>> parent of 5570867 (add save token without run)
   setupGetIt();

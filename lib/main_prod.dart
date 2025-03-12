@@ -5,14 +5,24 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'core/di/dependency_injection.dart';
 
 void main() async {
-<<<<<<< HEAD
+  // for
   WidgetsFlutterBinding.ensureInitialized();
-=======
->>>>>>> parent of 5570867 (add save token without run)
   setupGetIt();
   // to fix text being hidden bug in flutter_screenutil in release mode
   await ScreenUtil.ensureScreenSize();
+  // await checkIfLoggedInUser();
   runApp(DocApp(
     appRouter: AppRouter(),
   ));
 }
+
+// checkIfLoggedInUser() async {
+//   // check if user is logged in
+//   String? userToken =
+//       await SharedPrefHelper.getString(SharedPrefKeys.userToken);
+//   if (!userToken.isNullOrEmpty()) {
+//     isLoggedInUser = true;
+//   } else {
+//     isLoggedInUser = false;
+//   }
+// }
