@@ -19,50 +19,50 @@ mixin _$SignUpState<T> {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
-    required TResult Function() SignupLoading,
-    required TResult Function(T data) SignupSuccess,
-    required TResult Function(String message) SignupError,
+    required TResult Function() SginupLoading,
+    required TResult Function(T data) SginupSuccess,
+    required TResult Function(String message) SginupError,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
-    TResult? Function()? SignupLoading,
-    TResult? Function(T data)? SignupSuccess,
-    TResult? Function(String message)? SignupError,
+    TResult? Function()? SginupLoading,
+    TResult? Function(T data)? SginupSuccess,
+    TResult? Function(String message)? SginupError,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
-    TResult Function()? SignupLoading,
-    TResult Function(T data)? SignupSuccess,
-    TResult Function(String message)? SignupError,
+    TResult Function()? SginupLoading,
+    TResult Function(T data)? SginupSuccess,
+    TResult Function(String message)? SginupError,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_Initial<T> value) initial,
-    required TResult Function(SignUpLoading<T> value) SignupLoading,
-    required TResult Function(SignUpSuccess<T> value) SignupSuccess,
-    required TResult Function(SignUpFailure<T> value) SignupError,
+    required TResult Function(SignUpLoading<T> value) SginupLoading,
+    required TResult Function(SignUpSuccess<T> value) SginupSuccess,
+    required TResult Function(SignUpFailure<T> value) SginupError,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Initial<T> value)? initial,
-    TResult? Function(SignUpLoading<T> value)? SignupLoading,
-    TResult? Function(SignUpSuccess<T> value)? SignupSuccess,
-    TResult? Function(SignUpFailure<T> value)? SignupError,
+    TResult? Function(SignUpLoading<T> value)? SginupLoading,
+    TResult? Function(SignUpSuccess<T> value)? SginupSuccess,
+    TResult? Function(SignUpFailure<T> value)? SginupError,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Initial<T> value)? initial,
-    TResult Function(SignUpLoading<T> value)? SignupLoading,
-    TResult Function(SignUpSuccess<T> value)? SignupSuccess,
-    TResult Function(SignUpFailure<T> value)? SignupError,
+    TResult Function(SignUpLoading<T> value)? SginupLoading,
+    TResult Function(SignUpSuccess<T> value)? SginupSuccess,
+    TResult Function(SignUpFailure<T> value)? SginupError,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -131,9 +131,9 @@ class _$InitialImpl<T> implements _Initial<T> {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
-    required TResult Function() SignupLoading,
-    required TResult Function(T data) SignupSuccess,
-    required TResult Function(String message) SignupError,
+    required TResult Function() SginupLoading,
+    required TResult Function(T data) SginupSuccess,
+    required TResult Function(String message) SginupError,
   }) {
     return initial();
   }
@@ -142,9 +142,9 @@ class _$InitialImpl<T> implements _Initial<T> {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
-    TResult? Function()? SignupLoading,
-    TResult? Function(T data)? SignupSuccess,
-    TResult? Function(String message)? SignupError,
+    TResult? Function()? SginupLoading,
+    TResult? Function(T data)? SginupSuccess,
+    TResult? Function(String message)? SginupError,
   }) {
     return initial?.call();
   }
@@ -153,9 +153,9 @@ class _$InitialImpl<T> implements _Initial<T> {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
-    TResult Function()? SignupLoading,
-    TResult Function(T data)? SignupSuccess,
-    TResult Function(String message)? SignupError,
+    TResult Function()? SginupLoading,
+    TResult Function(T data)? SginupSuccess,
+    TResult Function(String message)? SginupError,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -168,9 +168,9 @@ class _$InitialImpl<T> implements _Initial<T> {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_Initial<T> value) initial,
-    required TResult Function(SignUpLoading<T> value) SignupLoading,
-    required TResult Function(SignUpSuccess<T> value) SignupSuccess,
-    required TResult Function(SignUpFailure<T> value) SignupError,
+    required TResult Function(SignUpLoading<T> value) SginupLoading,
+    required TResult Function(SignUpSuccess<T> value) SginupSuccess,
+    required TResult Function(SignUpFailure<T> value) SginupError,
   }) {
     return initial(this);
   }
@@ -179,9 +179,9 @@ class _$InitialImpl<T> implements _Initial<T> {
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Initial<T> value)? initial,
-    TResult? Function(SignUpLoading<T> value)? SignupLoading,
-    TResult? Function(SignUpSuccess<T> value)? SignupSuccess,
-    TResult? Function(SignUpFailure<T> value)? SignupError,
+    TResult? Function(SignUpLoading<T> value)? SginupLoading,
+    TResult? Function(SignUpSuccess<T> value)? SginupSuccess,
+    TResult? Function(SignUpFailure<T> value)? SginupError,
   }) {
     return initial?.call(this);
   }
@@ -190,9 +190,9 @@ class _$InitialImpl<T> implements _Initial<T> {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Initial<T> value)? initial,
-    TResult Function(SignUpLoading<T> value)? SignupLoading,
-    TResult Function(SignUpSuccess<T> value)? SignupSuccess,
-    TResult Function(SignUpFailure<T> value)? SignupError,
+    TResult Function(SignUpLoading<T> value)? SginupLoading,
+    TResult Function(SignUpSuccess<T> value)? SginupSuccess,
+    TResult Function(SignUpFailure<T> value)? SginupError,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -232,7 +232,7 @@ class _$SignUpLoadingImpl<T> implements SignUpLoading<T> {
 
   @override
   String toString() {
-    return 'SignUpState<$T>.SignupLoading()';
+    return 'SignUpState<$T>.SginupLoading()';
   }
 
   @override
@@ -248,35 +248,35 @@ class _$SignUpLoadingImpl<T> implements SignUpLoading<T> {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
-    required TResult Function() SignupLoading,
-    required TResult Function(T data) SignupSuccess,
-    required TResult Function(String message) SignupError,
+    required TResult Function() SginupLoading,
+    required TResult Function(T data) SginupSuccess,
+    required TResult Function(String message) SginupError,
   }) {
-    return SignupLoading();
+    return SginupLoading();
   }
 
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
-    TResult? Function()? SignupLoading,
-    TResult? Function(T data)? SignupSuccess,
-    TResult? Function(String message)? SignupError,
+    TResult? Function()? SginupLoading,
+    TResult? Function(T data)? SginupSuccess,
+    TResult? Function(String message)? SginupError,
   }) {
-    return SignupLoading?.call();
+    return SginupLoading?.call();
   }
 
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
-    TResult Function()? SignupLoading,
-    TResult Function(T data)? SignupSuccess,
-    TResult Function(String message)? SignupError,
+    TResult Function()? SginupLoading,
+    TResult Function(T data)? SginupSuccess,
+    TResult Function(String message)? SginupError,
     required TResult orElse(),
   }) {
-    if (SignupLoading != null) {
-      return SignupLoading();
+    if (SginupLoading != null) {
+      return SginupLoading();
     }
     return orElse();
   }
@@ -285,35 +285,35 @@ class _$SignUpLoadingImpl<T> implements SignUpLoading<T> {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_Initial<T> value) initial,
-    required TResult Function(SignUpLoading<T> value) SignupLoading,
-    required TResult Function(SignUpSuccess<T> value) SignupSuccess,
-    required TResult Function(SignUpFailure<T> value) SignupError,
+    required TResult Function(SignUpLoading<T> value) SginupLoading,
+    required TResult Function(SignUpSuccess<T> value) SginupSuccess,
+    required TResult Function(SignUpFailure<T> value) SginupError,
   }) {
-    return SignupLoading(this);
+    return SginupLoading(this);
   }
 
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Initial<T> value)? initial,
-    TResult? Function(SignUpLoading<T> value)? SignupLoading,
-    TResult? Function(SignUpSuccess<T> value)? SignupSuccess,
-    TResult? Function(SignUpFailure<T> value)? SignupError,
+    TResult? Function(SignUpLoading<T> value)? SginupLoading,
+    TResult? Function(SignUpSuccess<T> value)? SginupSuccess,
+    TResult? Function(SignUpFailure<T> value)? SginupError,
   }) {
-    return SignupLoading?.call(this);
+    return SginupLoading?.call(this);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Initial<T> value)? initial,
-    TResult Function(SignUpLoading<T> value)? SignupLoading,
-    TResult Function(SignUpSuccess<T> value)? SignupSuccess,
-    TResult Function(SignUpFailure<T> value)? SignupError,
+    TResult Function(SignUpLoading<T> value)? SginupLoading,
+    TResult Function(SignUpSuccess<T> value)? SginupSuccess,
+    TResult Function(SignUpFailure<T> value)? SginupError,
     required TResult orElse(),
   }) {
-    if (SignupLoading != null) {
-      return SignupLoading(this);
+    if (SginupLoading != null) {
+      return SginupLoading(this);
     }
     return orElse();
   }
@@ -366,7 +366,7 @@ class _$SignUpSuccessImpl<T> implements SignUpSuccess<T> {
 
   @override
   String toString() {
-    return 'SignUpState<$T>.SignupSuccess(data: $data)';
+    return 'SignUpState<$T>.SginupSuccess(data: $data)';
   }
 
   @override
@@ -394,35 +394,35 @@ class _$SignUpSuccessImpl<T> implements SignUpSuccess<T> {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
-    required TResult Function() SignupLoading,
-    required TResult Function(T data) SignupSuccess,
-    required TResult Function(String message) SignupError,
+    required TResult Function() SginupLoading,
+    required TResult Function(T data) SginupSuccess,
+    required TResult Function(String message) SginupError,
   }) {
-    return SignupSuccess(data);
+    return SginupSuccess(data);
   }
 
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
-    TResult? Function()? SignupLoading,
-    TResult? Function(T data)? SignupSuccess,
-    TResult? Function(String message)? SignupError,
+    TResult? Function()? SginupLoading,
+    TResult? Function(T data)? SginupSuccess,
+    TResult? Function(String message)? SginupError,
   }) {
-    return SignupSuccess?.call(data);
+    return SginupSuccess?.call(data);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
-    TResult Function()? SignupLoading,
-    TResult Function(T data)? SignupSuccess,
-    TResult Function(String message)? SignupError,
+    TResult Function()? SginupLoading,
+    TResult Function(T data)? SginupSuccess,
+    TResult Function(String message)? SginupError,
     required TResult orElse(),
   }) {
-    if (SignupSuccess != null) {
-      return SignupSuccess(data);
+    if (SginupSuccess != null) {
+      return SginupSuccess(data);
     }
     return orElse();
   }
@@ -431,35 +431,35 @@ class _$SignUpSuccessImpl<T> implements SignUpSuccess<T> {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_Initial<T> value) initial,
-    required TResult Function(SignUpLoading<T> value) SignupLoading,
-    required TResult Function(SignUpSuccess<T> value) SignupSuccess,
-    required TResult Function(SignUpFailure<T> value) SignupError,
+    required TResult Function(SignUpLoading<T> value) SginupLoading,
+    required TResult Function(SignUpSuccess<T> value) SginupSuccess,
+    required TResult Function(SignUpFailure<T> value) SginupError,
   }) {
-    return SignupSuccess(this);
+    return SginupSuccess(this);
   }
 
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Initial<T> value)? initial,
-    TResult? Function(SignUpLoading<T> value)? SignupLoading,
-    TResult? Function(SignUpSuccess<T> value)? SignupSuccess,
-    TResult? Function(SignUpFailure<T> value)? SignupError,
+    TResult? Function(SignUpLoading<T> value)? SginupLoading,
+    TResult? Function(SignUpSuccess<T> value)? SginupSuccess,
+    TResult? Function(SignUpFailure<T> value)? SginupError,
   }) {
-    return SignupSuccess?.call(this);
+    return SginupSuccess?.call(this);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Initial<T> value)? initial,
-    TResult Function(SignUpLoading<T> value)? SignupLoading,
-    TResult Function(SignUpSuccess<T> value)? SignupSuccess,
-    TResult Function(SignUpFailure<T> value)? SignupError,
+    TResult Function(SignUpLoading<T> value)? SginupLoading,
+    TResult Function(SignUpSuccess<T> value)? SginupSuccess,
+    TResult Function(SignUpFailure<T> value)? SginupError,
     required TResult orElse(),
   }) {
-    if (SignupSuccess != null) {
-      return SignupSuccess(this);
+    if (SginupSuccess != null) {
+      return SginupSuccess(this);
     }
     return orElse();
   }
@@ -520,7 +520,7 @@ class _$SignUpFailureImpl<T> implements SignUpFailure<T> {
 
   @override
   String toString() {
-    return 'SignUpState<$T>.SignupError(message: $message)';
+    return 'SignUpState<$T>.SginupError(message: $message)';
   }
 
   @override
@@ -547,35 +547,35 @@ class _$SignUpFailureImpl<T> implements SignUpFailure<T> {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
-    required TResult Function() SignupLoading,
-    required TResult Function(T data) SignupSuccess,
-    required TResult Function(String message) SignupError,
+    required TResult Function() SginupLoading,
+    required TResult Function(T data) SginupSuccess,
+    required TResult Function(String message) SginupError,
   }) {
-    return SignupError(message);
+    return SginupError(message);
   }
 
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
-    TResult? Function()? SignupLoading,
-    TResult? Function(T data)? SignupSuccess,
-    TResult? Function(String message)? SignupError,
+    TResult? Function()? SginupLoading,
+    TResult? Function(T data)? SginupSuccess,
+    TResult? Function(String message)? SginupError,
   }) {
-    return SignupError?.call(message);
+    return SginupError?.call(message);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
-    TResult Function()? SignupLoading,
-    TResult Function(T data)? SignupSuccess,
-    TResult Function(String message)? SignupError,
+    TResult Function()? SginupLoading,
+    TResult Function(T data)? SginupSuccess,
+    TResult Function(String message)? SginupError,
     required TResult orElse(),
   }) {
-    if (SignupError != null) {
-      return SignupError(message);
+    if (SginupError != null) {
+      return SginupError(message);
     }
     return orElse();
   }
@@ -584,35 +584,35 @@ class _$SignUpFailureImpl<T> implements SignUpFailure<T> {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_Initial<T> value) initial,
-    required TResult Function(SignUpLoading<T> value) SignupLoading,
-    required TResult Function(SignUpSuccess<T> value) SignupSuccess,
-    required TResult Function(SignUpFailure<T> value) SignupError,
+    required TResult Function(SignUpLoading<T> value) SginupLoading,
+    required TResult Function(SignUpSuccess<T> value) SginupSuccess,
+    required TResult Function(SignUpFailure<T> value) SginupError,
   }) {
-    return SignupError(this);
+    return SginupError(this);
   }
 
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Initial<T> value)? initial,
-    TResult? Function(SignUpLoading<T> value)? SignupLoading,
-    TResult? Function(SignUpSuccess<T> value)? SignupSuccess,
-    TResult? Function(SignUpFailure<T> value)? SignupError,
+    TResult? Function(SignUpLoading<T> value)? SginupLoading,
+    TResult? Function(SignUpSuccess<T> value)? SginupSuccess,
+    TResult? Function(SignUpFailure<T> value)? SginupError,
   }) {
-    return SignupError?.call(this);
+    return SginupError?.call(this);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Initial<T> value)? initial,
-    TResult Function(SignUpLoading<T> value)? SignupLoading,
-    TResult Function(SignUpSuccess<T> value)? SignupSuccess,
-    TResult Function(SignUpFailure<T> value)? SignupError,
+    TResult Function(SignUpLoading<T> value)? SginupLoading,
+    TResult Function(SignUpSuccess<T> value)? SginupSuccess,
+    TResult Function(SignUpFailure<T> value)? SginupError,
     required TResult orElse(),
   }) {
-    if (SignupError != null) {
-      return SignupError(this);
+    if (SginupError != null) {
+      return SginupError(this);
     }
     return orElse();
   }
