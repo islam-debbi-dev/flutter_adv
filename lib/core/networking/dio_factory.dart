@@ -22,6 +22,18 @@ class DioFactory {
     }
   }
 
+<<<<<<< HEAD
+=======
+  static void addDioHeaders() {
+    dio!.options.headers = {
+      'Accept': 'application/json',
+      // token bearer
+      'Authorization':
+          'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczovL3ZjYXJlLmludGVncmF0aW9uMjUuY29tL2FwaS9hdXRoL2xvZ2luIiwiaWF0IjoxNzQxNDM4ODY4LCJleHAiOjE3NDE1MjUyNjgsIm5iZiI6MTc0MTQzODg2OCwianRpIjoiZldEbkgzU0RWSDBuRGVzOSIsInN1YiI6IjMyMDEiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.daPGvp_Z08ejPudh5nt56i1CSa236DlVB8kxG2r4mgo',
+    };
+  }
+
+>>>>>>> parent of 5570867 (add save token without run)
   static void addDioInterceptors() {
     dio!.interceptors.add(
       PrettyDioLogger(
