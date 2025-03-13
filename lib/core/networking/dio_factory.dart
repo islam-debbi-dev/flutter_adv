@@ -11,7 +11,7 @@ class DioFactory {
 
   static Dio? dio;
   static Dio getDio() {
-    Duration timeout = const Duration(seconds: 30);
+    Duration timeout = const Duration(seconds: 60);
 
     if (dio == null) {
       dio = Dio();
@@ -19,6 +19,7 @@ class DioFactory {
         ..options.connectTimeout = timeout
         ..options.receiveTimeout = timeout;
       addDioInterceptors();
+      addDioHeaders();
       return dio!;
     } else {
       return dio!;
@@ -30,11 +31,16 @@ class DioFactory {
       'Accept': 'application/json',
       // token bearer
       'Authorization':
-          'Bearer ${await SharedPrefHelper.getString(SharedPrefKeys.userToken)}',
+          'Bearer ${await SharedPrefHelper.getSecuredString(SharedPrefKeys.userToken)}',
     };
   }
 
->>>>>>> parent of 5570867 (add save token without run)
+  static void setTokenAfterLogin(String token) async {
+    dio!.options.headers = {
+      'Authorization': 'Bearer $token ',
+    };
+  }
+
   static void addDioInterceptors() {
     dio!.interceptors.add(
       PrettyDioLogger(
