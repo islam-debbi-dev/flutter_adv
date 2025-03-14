@@ -1,9 +1,6 @@
 import 'package:dio/dio.dart';
 import 'package:pretty_dio_logger/pretty_dio_logger.dart';
 
-import '../helpers/constants.dart';
-import '../helpers/shared_pref_helper.dart';
-
 class DioFactory {
   // private constructor
 
@@ -11,33 +8,27 @@ class DioFactory {
 
   static Dio? dio;
   static Dio getDio() {
-    Duration timeout = const Duration(seconds: 60);
+    Duration timeout = const Duration(seconds: 30);
 
     if (dio == null) {
       dio = Dio();
       dio!
         ..options.connectTimeout = timeout
         ..options.receiveTimeout = timeout;
-      addDioInterceptors();
       addDioHeaders();
+      addDioInterceptors();
       return dio!;
     } else {
       return dio!;
     }
   }
 
-  static void addDioHeaders() async {
+  static void addDioHeaders() {
     dio!.options.headers = {
       'Accept': 'application/json',
       // token bearer
       'Authorization':
-          'Bearer ${await SharedPrefHelper.getSecuredString(SharedPrefKeys.userToken)}',
-    };
-  }
-
-  static void setTokenAfterLogin(String token) async {
-    dio!.options.headers = {
-      'Authorization': 'Bearer $token ',
+          'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczovL3ZjYXJlLmludGVncmF0aW9uMjUuY29tL2FwaS9hdXRoL2xvZ2luIiwiaWF0IjoxNzQxNDM4ODY4LCJleHAiOjE3NDE1MjUyNjgsIm5iZiI6MTc0MTQzODg2OCwianRpIjoiZldEbkgzU0RWSDBuRGVzOSIsInN1YiI6IjMyMDEiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.daPGvp_Z08ejPudh5nt56i1CSa236DlVB8kxG2r4mgo',
     };
   }
 
