@@ -1,43 +1,40 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_adv/features/home/logic/home_cubit.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../../data/models/specializations_response_model.dart';
-import '../../../logic/home_cubit.dart';
 import 'speciality_list_view_item.dart';
 
 class SpecialityListView extends StatefulWidget {
-  final List<SpecializationsData?> specializationDataList;
-  const SpecialityListView({super.key, required this.specializationDataList});
+  final List<SpecializationsData?> specializationsList;
+  const SpecialityListView({super.key, required this.specializationsList});
 
   @override
-  State<SpecialityListView> createState() => _SpecialityListViewState();
+  State<SpecialityListView> createState() => _DoctorSpecialityListViewState();
 }
 
-class _SpecialityListViewState extends State<SpecialityListView> {
-  var selectedSpecializationIndex = 0;
-
+class _DoctorSpecialityListViewState extends State<SpecialityListView> {
+  var selectSpecializationIndex = 0;
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: 100.h,
+      height: 100, // Provide a fixed height
       child: ListView.builder(
         scrollDirection: Axis.horizontal,
-        itemCount: widget.specializationDataList.length,
+        itemCount: widget.specializationsList.length,
         itemBuilder: (context, index) {
           return GestureDetector(
             onTap: () {
               setState(() {
-                selectedSpecializationIndex = index;
+                selectSpecializationIndex = index;
               });
               context.read<HomeCubit>().getDoctorsList(
-                    specializationId: widget.specializationDataList[index]?.id,
-                  );
+                  specializationId: widget.specializationsList[index]?.id);
             },
             child: SpecialityListViewItem(
-              specializationsData: widget.specializationDataList[index],
               itemIndex: index,
-              selectedIndex: selectedSpecializationIndex,
+              specializationsData: widget.specializationsList[index],
+              selectedIndex: selectSpecializationIndex,
             ),
           );
         },
