@@ -3,10 +3,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:shimmer/shimmer.dart';
 
-import '../../../../core/helpers/spacing.dart';
-import '../../../../core/theming/colors.dart';
-import '../../../../core/theming/styles.dart';
-import '../../data/models/specializations_response_model.dart';
+import '../../../../../core/helpers/spacing.dart';
+import '../../../../../core/theming/colors.dart';
+import '../../../../../core/theming/styles.dart';
+import '../../../data/models/specializations_response_model.dart';
 
 class DoctorsListViewItem extends StatelessWidget {
   final Doctors? doctorsModel;
@@ -49,16 +49,6 @@ class DoctorsListViewItem extends StatelessWidget {
               ),
             ),
           ),
-
-          // ClipRRect(
-          //   borderRadius: BorderRadius.circular(12.0),
-          //   child: Image.network(
-          //     'https://therapybrands.com/wp-content/uploads/2023/05/Mask-Group-2@2x-1518x1536-1.png',
-          //     width: 110.w,
-          //     height: 120.h,
-          //     fit: BoxFit.cover,
-          //   ),
-          // ),
           horizontalSpace(16),
           Expanded(
             child: Column(
