@@ -4,9 +4,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import '../../../../../core/helpers/spacing.dart';
 import '../../../logic/home_cubit.dart';
 import '../../../logic/home_state.dart';
-import '../doctors_list/doctors_shimmer_loading.dart';
 import 'speciality_list_view.dart';
-import 'speciality_shimmer_loading.dart';
 
 class SpecializationsBlocBuilder extends StatelessWidget {
   const SpecializationsBlocBuilder({super.key});

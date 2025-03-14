@@ -1,19 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_complete_project/features/home/logic/home_cubit.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../../data/models/specializations_response_model.dart';
+import '../../../logic/home_cubit.dart';
 import 'speciality_list_view_item.dart';
 
 class SpecialityListView extends StatefulWidget {
   final List<SpecializationsData?> specializationDataList;
-  const SpecialityListView(
-      {super.key, required this.specializationDataList});
+  const SpecialityListView({super.key, required this.specializationDataList});
 
   @override
-  State<SpecialityListView> createState() =>
-      _SpecialityListViewState();
+  State<SpecialityListView> createState() => _SpecialityListViewState();
 }
 
 class _SpecialityListViewState extends State<SpecialityListView> {

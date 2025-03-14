@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-import '../../../logic/home_cubit.dart';
-import '../../../logic/home_state.dart';
-import 'doctors_list_view.dart';
+import '../../logic/home_cubit.dart';
+import '../../logic/home_state.dart';
+import 'doctors_list/doctors_list_view.dart';
 
 class DoctorsBlocBuilder extends StatelessWidget {
   const DoctorsBlocBuilder({super.key});
