@@ -19,7 +19,7 @@ class DoctorsShimmerLoading extends StatelessWidget {
             child: Row(
               children: [
                 Shimmer.fromColors(
-                  baseColor: ColorsManager.lightGray,
+                  baseColor: ColorsManager.lightGary,
                   highlightColor: Colors.white,
                   child: Container(
                     width: 110.w,
@@ -37,39 +37,39 @@ class DoctorsShimmerLoading extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Shimmer.fromColors(
-                        baseColor: ColorsManager.lightGray,
+                        baseColor: ColorsManager.lightGary,
                         highlightColor: Colors.white,
                         child: Container(
                           height: 18.h,
                           width: 180.w,
                           decoration: BoxDecoration(
-                            color: ColorsManager.lightGray,
+                            color: ColorsManager.lightGary,
                             borderRadius: BorderRadius.circular(12),
                           ),
                         ),
                       ),
                       verticalSpace(12),
                       Shimmer.fromColors(
-                        baseColor: ColorsManager.lightGray,
+                        baseColor: ColorsManager.lightGary,
                         highlightColor: Colors.white,
                         child: Container(
                           height: 14.h,
                           width: 160.w,
                           decoration: BoxDecoration(
-                            color: ColorsManager.lightGray,
+                            color: ColorsManager.lightGary,
                             borderRadius: BorderRadius.circular(12),
                           ),
                         ),
                       ),
                       verticalSpace(12),
                       Shimmer.fromColors(
-                        baseColor: ColorsManager.lightGray,
+                        baseColor: ColorsManager.lightGary,
                         highlightColor: Colors.white,
                         child: Container(
                           height: 14.h,
                           width: 160.w,
                           decoration: BoxDecoration(
-                            color: ColorsManager.lightGray,
+                            color: ColorsManager.lightGary,
                             borderRadius: BorderRadius.circular(12),
                           ),
                         ),

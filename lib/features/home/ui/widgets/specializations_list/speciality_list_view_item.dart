@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_complete_project/features/home/data/models/specializations_response_model.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 import '../../../../../core/helpers/spacing.dart';
 import '../../../../../core/theming/colors.dart';
 import '../../../../../core/theming/styles.dart';
+import '../../../data/models/specializations_response_model.dart';
 
 class SpecialityListViewItem extends StatelessWidget {
   final SpecializationsData? specializationsData;
@@ -34,7 +34,7 @@ class SpecialityListViewItem extends StatelessWidget {
                   ),
                   child: CircleAvatar(
                     radius: 28,
-                    backgroundColor: ColorsManager.lightBlue,
+                    backgroundColor: ColorsManager.lightGary,
                     child: SvgPicture.asset(
                       'assets/svgs/general_speciality.svg',
                       height: 42.h,
@@ -44,7 +44,7 @@ class SpecialityListViewItem extends StatelessWidget {
                 )
               : CircleAvatar(
                   radius: 28,
-                  backgroundColor: ColorsManager.lightBlue,
+                  backgroundColor: ColorsManager.lightGary,
                   child: SvgPicture.asset(
                     'assets/svgs/general_speciality.svg',
                     height: 40.h,
@@ -55,8 +55,8 @@ class SpecialityListViewItem extends StatelessWidget {
           Text(
             specializationsData?.name ?? 'Specialization',
             style: itemIndex == selectedIndex
-                ? TextStyles.font14DarkBlueBold
-                : TextStyles.font12DarkBlueRegular,
+                ? TextStyles.font14BlueSemiBold
+                : TextStyles.font12DarkGrayRegular,
           ),
         ],
       ),

@@ -23,7 +23,7 @@ class DoctorsListViewItem extends StatelessWidget {
                 "https://therapybrands.com/wp-content/uploads/2023/05/Mask-Group-2@2x-1518x1536-1.png",
             progressIndicatorBuilder: (context, url, downloadProgress) {
               return Shimmer.fromColors(
-                baseColor: ColorsManager.lightGray,
+                baseColor: ColorsManager.lightGary,
                 highlightColor: Colors.white,
                 child: Container(
                   width: 110.w,
