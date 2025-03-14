@@ -3,6 +3,7 @@ import 'package:flutter_adv/core/routing/app_router.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_adv/core/routing/routes.dart';
 
+import 'core/helpers/constants.dart';
 import 'core/theming/colors.dart';
 
 class DocApp extends StatelessWidget {
@@ -23,11 +24,7 @@ class DocApp extends StatelessWidget {
           ),
           debugShowCheckedModeBanner: false,
           onGenerateRoute: appRouter.generateRoute,
-<<<<<<< HEAD
-          initialRoute: Routes.onBoardingScreen,
-=======
-          initialRoute: Routes.homeScreen,
->>>>>>> parent of 5570867 (add save token without run)
+          initialRoute: isLoggedInUser ? Routes.homeScreen : Routes.loginScreen,
         ));
   }
 }

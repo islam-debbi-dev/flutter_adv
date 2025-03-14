@@ -1,8 +1,5 @@
 {
-<<<<<<< HEAD
+
     "java.configuration.updateBuildConfiguration": "interactive"
-=======
-    "java.configuration.updateBuildConfiguration": "interactive",
-    "cmake.sourceDirectory": "E:/f/Projects_/Learn_Adv_Flutter/flutter_adv/linux"
->>>>>>> parent of 5570867 (add save token without run)
+
 }

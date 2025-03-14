@@ -35,7 +35,7 @@ dependencies:
   # state managment
   flutter_bloc: ^9.1.0
   # code generator
-  freezed: ^3.0.0-0.0.dev
+  freezed: 3.0.0-0.0.dev
   freezed_annotation: ^3.0.0
   # for dependency injection
   get_it: ^8.0.3
@@ -57,16 +57,17 @@ dependencies:
   # responsive : for adapting screen and font size
   flutter_screenutil: ^5.9.3
   # build file auto generated
-  build_runner: ^2.4.14
+  build_runner: ^2.4.15
   # to access to firebase
   firebase_core: ^3.12.1
-<<<<<<< HEAD
-=======
   # flutter libary lo load image from network
   cached_network_image: ^3.1.0
   # for image picker
   shimmer: ^2.0.0
->>>>>>> parent of 5570867 (add save token without run)
+  # reading and writing simple value 
+  shared_preferences: ^2.0.15
+  # for secure storage specific token
+  flutter_secure_storage: ^9.2.4
 
 dev_dependencies:
   flutter_test:
