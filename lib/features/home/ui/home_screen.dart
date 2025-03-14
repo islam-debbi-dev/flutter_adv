@@ -18,6 +18,11 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
+      appBar: AppBar(
+        backgroundColor: Colors.white,
+        automaticallyImplyLeading: false,
+        title: const HomeTopBar(),
+      ),
       body: SafeArea(
         child: Container(
           width: double.infinity,
@@ -25,7 +30,6 @@ class _HomeScreenState extends State<HomeScreen> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              const HomeTopBar(),
               const DoctorsBlueContainer(),
               verticalSpace(16.h),
               const DoctorSpecialitySeeAllList(),

@@ -3,9 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_adv/features/login/data/repo/login_repo.dart';
 import 'package:flutter_adv/features/login/logic/login_state.dart';
 
-import '../../../core/helpers/constants.dart';
-import '../../../core/helpers/shared_pref_helper.dart';
-import '../../../core/networking/dio_factory.dart';
 import '../data/models/login_request_body.dart';
 
 class LoginCubit extends Cubit<LoginState> {
@@ -30,8 +27,7 @@ class LoginCubit extends Cubit<LoginState> {
     );
 
     resp.when(
-      success: (loginResponse) async {
-        await saveUserToken(loginResponse.userData?.token ?? "");
+      success: (loginResponse) {
         emit(LoginState.success(loginResponse));
       },
       failure: (error) {
@@ -40,11 +36,5 @@ class LoginCubit extends Cubit<LoginState> {
         emit(LoginState.failure(error.apiErrorModel.message ?? " "));
       },
     );
-  }
-
-  Future<void> saveUserToken(String token) async {
-    // save token to shared pref
-    await SharedPrefHelper.setSecuredString(SharedPrefKeys.userToken, token);
-    DioFactory.setTokenAfterLogin(token);
   }
 }

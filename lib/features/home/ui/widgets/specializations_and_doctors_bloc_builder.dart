@@ -7,7 +7,6 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../../../core/helpers/spacing.dart';
 import 'doctors_list_view.dart';
-import 'recommendation_doctor_see_all_list.dart';
 
 class SpecializationsAndDoctorsBlocBuilder extends StatelessWidget {
   const SpecializationsAndDoctorsBlocBuilder({super.key});
@@ -51,8 +50,7 @@ class SpecializationsAndDoctorsBlocBuilder extends StatelessWidget {
           DoctorSpecialityListView(
             specializationsList: specializationsList ?? [],
           ),
-          // const RecommendationDoctorSeeAllList(),
-          verticalSpace(10.h),
+          verticalSpace(16.h),
           DoctorsListView(doctorsList: specializationsList?[0]?.doctorsList),
         ],
       ),
