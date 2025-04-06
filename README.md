@@ -1,16 +1,16 @@
 # flutter_adv
 
-A new Flutter project.
+this login sign up and homepage contains specifications of doctors and doctors
 
-## Getting Started
+- used bloc (business login component )
+- used retrofit
+- used dio
+- used json serialization
+- used freezed
+- used firebase
+- used flavors
+- used intl
+- used screenuntil
+- shimmer
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+it's special for clean architecture code
