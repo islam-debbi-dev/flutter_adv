@@ -5,6 +5,7 @@ this login sign up and homepage contains specifications of doctors and doctors
 - used bloc (business login component )
 - used retrofit
 - used dio
+- gitit (injection)
 - used json serialization
 - used freezed
 - used firebase
